@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import getImages from './images-api';
 import SearchBar from './components/SearchBar/SearchBar';
+import ImageGallery from './components/ImageGallery/ImageGallery';
 
 function App() {
   const [images, setImages] = useState([]);
@@ -22,11 +23,8 @@ function App() {
       <div>
         <SearchBar onSubmit={onSubmit} />
         {error && <p>Помилка: {error}</p>}
-        <div>
-          {images.map((image) => (
-            <img key={image.id} src={image.urls.small} alt={image.description} />
-          ))}
-        </div>
+        
+        <ImageGallery images={images} />
       </div>
     </>
   );
