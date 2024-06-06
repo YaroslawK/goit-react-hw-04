@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const UNSPLASH_ACCESS_KEY = 'E1cdy3dv_KADegi36FDRDy7wAcwRFX8WkgPlx-8266g';  // Замініть на свій ключ доступу
+const UNSPLASH_ACCESS_KEY = 'E1cdy3dv_KADegi36FDRDy7wAcwRFX8WkgPlx-8266g';
 
 async function getImages(query, perPage = 10, page = 1) {
     const url = `https://api.unsplash.com/search/photos`;
