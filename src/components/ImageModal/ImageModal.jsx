@@ -8,11 +8,11 @@ const ImageModal = ({ isOpen, onRequestClose, image }) => {
     <Modal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
-      className="modal"
-      overlayClassName="overlay"
+      className={css.modal}
+      overlayClassName={css.overlay}
     >
       {image && (
-        <div className="modal-content">
+        <div className={css.modalContent}>
           <img src={image.urls.regular} alt={image.description} />
         </div>
       )}

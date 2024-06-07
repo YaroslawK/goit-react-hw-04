@@ -20,22 +20,11 @@ async function getImages(query, perPage = 10, page = 1) {
 
         return response.data.results;
     } catch (error) {
-        console.error('Помилка при отриманні зображень з Unsplash:', error.message);
-        console.error('Деталі помилки:', error.response?.data || error);
+        console.error(error.message);
+        console.error(error.response?.data || error);
         throw error;
     }
 }
-
-async function fetchImages() {
-    try {
-        const images = await getImages('nature');
-        console.log('Отримані зображення:', images);
-    } catch (error) {
-        console.error('Помилка:', error.message);
-    }
-}
-
-fetchImages();
 
 
 export default getImages;
